@@ -11,6 +11,10 @@
 			rel="stylesheet"
 			href="style.css"
 		/>
+		<script
+			src="https://kit.fontawesome.com/e3fdf6ef30.js"
+			crossorigin="anonymous"
+		></script>
 	</head>
 	<body>
 		<header class="padding-x flex-between">
@@ -32,24 +36,133 @@
 		</header>
 		<main>
 			<section id="home">
-				<div class="home-container padding-x flex">
+				<div class="home-container padding-x">
 					<h1 class="home-title">NOX Capital Partners</h1>
-					<div class="home-text padding-x">
-						<p>
-							Premier boutique investment bank offering tailor made financial
-							advisory services across U.S. and Latam
-						</p>
-					</div>
+					<p class="home-text padding-x">
+						Premier boutique investment bank offering tailor made financial
+						advisory services across U.S. and Latam
+					</p>
 				</div>
 			</section>
 			<section id="about">
-				<div class="section-container padding-x"></div>
+				<div class="section-container padding-x">
+					<p class="section-title padding-x">
+						<span>About Us</span> | Top tier financial and strategic advisory
+						for our clients
+					</p>
+				</div>
 			</section>
 			<section id="services">
-				<div class="section-container padding-x"></div>
+				<div class="section-container padding-x">
+					<p class="section-title padding-x">
+						<span>Our Services</span> | Top tier financial and strategic
+						advisory for our clients
+					</p>
+					<p class="section-description">
+						NCP offers a wide range of financial advisory services to its
+						clients, including M&A, capital raising and fairness opinions. Its
+						members have worked for top tier financial institutions in deals
+						spanning a wide range of industries, including Oil & Gas,
+						agribusiness, real estate, energy, industrials, and others
+					</p>
+					<div class="services-content flex-between">
+						<article class="padding-x flex-between">
+							<h3>Mergers & Acquisitions</h3>
+							<p>
+								Expert guidance and execution for mergers, acquisitions,
+								divestitures, and strategic partnerships, encompassing deal
+								structuring, valuation, due diligence, and transaction
+								management
+							</p>
+						</article>
+						<article class="padding-x flex-between">
+							<h3>Capital Raising</h3>
+							<p>
+								Strategic advisory and execution support for securing optimal
+								funding across diverse sources, including equity, debt, and
+								hybrid instruments, tailored to client needs and market
+								conditions
+							</p>
+						</article>
+						<article class="padding-x flex-between">
+							<h3>Structured Finance</h3>
+							<p>
+								Provide expert guidance on complex financial transactions,
+								including designing custom financial products to optimize
+								capital structure, manage risk, and access non-traditional
+								funding sources
+							</p>
+						</article>
+						<article class="padding-x flex-between">
+							<h3>Fairness Opinions</h3>
+							<p>
+								Rigorous analysis to determine the fair market value of assets,
+								securities, or businesses, providing an objective benchmark for
+								transaction pricing and stakeholder protection in corporate
+								actions
+							</p>
+						</article>
+					</div>
+				</div>
 			</section>
 			<section id="contact">
-				<div class="section-container padding-x"></div>
+				<div class="section-container padding-x contact-container">
+					<p class="section-title padding-x">
+						<span>Contact</span> | Contact us
+					</p>
+					<div class="contact-content flex-between">
+						<div class="contact-address flex-center">
+							<div class="address-item flex-between">
+								<h3><i class="fa-solid fa-location-dot"></i> Address</h3>
+								<p>Honduras 5550, 4th floor</p>
+								<p>Buenos Aires, Argentina</p>
+							</div>
+							<div class="address-item flex-between">
+								<h3><i class="fa-solid fa-envelope"></i>Email</h3>
+								<p>matias@noxcapitals.com</p>
+							</div>
+						</div>
+						<form
+							action=""
+							class="contact-form flex-between"
+						>
+							<div class="form-item">
+								<label for="">Name</label>
+								<input
+									type="text"
+									name="name"
+									required
+								/>
+							</div>
+							<div class="form-item">
+								<label for="">Email</label>
+								<input
+									type="email"
+									name="email"
+									required
+								/>
+							</div>
+							<div class="form-item">
+								<label for="">Subject</label>
+								<input
+									type="text"
+									name="subject"
+									required
+								/>
+							</div>
+							<div class="form-item">
+								<label for="">Message</label>
+								<textarea
+									cols="30"
+									rows="10"
+									name="message"
+									id=""
+									required
+								></textarea>
+							</div>
+						</form>
+					</div>
+				</div>
 			</section>
 		</main>
 		<footer class="padding-x flex-between">
