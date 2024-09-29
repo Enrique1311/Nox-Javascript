@@ -9,7 +9,7 @@
 :root {
 	font-size: 16px;
 	--primary-color: #000000;
-	--bg-transparent-color: #000000d3;
+	--bg-transparent-color: #000000de;
 	--gray-transparent-color: #8f8e8e7e;
 	--white-color: #ffffff;
 }
@@ -168,7 +168,6 @@ header .descktop-navbar {
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 	padding-left: 1rem;
-	font-size: 0.9rem;
 }
 
 /* Contact ***************************************************************** */
@@ -179,22 +178,47 @@ header .descktop-navbar {
 	background-size: cover;
 }
 
+.contact-container {
+	min-height: auto;
+}
+
 .contact-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	flex-direction: column;
+	height: 100%;
 	gap: 4rem;
 }
 
 .contact-address {
-	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	gap: 2rem;
+}
+
+.contact-address img {
+	width: 50%;
+}
+
+.address-items {
 	flex-direction: column;
 	gap: 2rem;
-	width: 100%;
 }
 
 .address-item {
-	flex-direction: column;
-	align-items: flex-start;
-	gap: 0.5rem;
+	width: 100%;
+	text-align: left;
+}
+
+.address-item h3,
+p {
+	width: 100%;
+	text-align: left;
 }
 
 .address-item i {
@@ -202,7 +226,7 @@ header .descktop-navbar {
 }
 
 .contact-form {
-	gap: 1rem;
+	gap: 1.4rem;
 	flex-direction: column;
 	align-items: flex-start;
 	width: 100%;
@@ -215,8 +239,9 @@ header .descktop-navbar {
 .form-item input,
 textarea {
 	width: 100%;
-	padding: 0.5rem;
-	margin-top: 0.5rem;
+	padding: 0.6rem;
+	font-size: 1rem;
+	margin-top: 0.4rem;
 	border: none;
 	background-color: var(--gray-transparent-color);
 	color: var(--white-color);
@@ -228,8 +253,14 @@ footer {
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 	gap: 1rem;
+	display: flex;
+	align-items: center;
 	flex-wrap: wrap;
 	background-color: var(--primary-color);
+}
+
+footer p {
+	width: auto;
 }
 
 /* Media Queries *****************************************************************/
@@ -240,6 +271,15 @@ footer {
 
 	.services-content article p {
 		width: 65%;
+	}
+
+	.contact-address {
+		flex-direction: row-reverse;
+		justify-content: space-around;
+	}
+
+	.contact-address img {
+		width: 30%;
 	}
 }
 
@@ -257,20 +297,40 @@ footer {
 	}
 
 	.contact-address {
+		width: 40%;
+		height: 490px;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-direction: column;
+	}
+
+	.contact-address img {
+		width: 100%;
+		max-width: 15rem;
+		margin: 0 auto;
+	}
+
+	.contact-form {
+		width: 60%;
+	}
+}
+
+@media screen and (min-width: 950px) {
+	.services-content article h3 {
+		width: 20%;
+	}
+
+	.services-content article p {
+		width: 80%;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.contact-address {
 		width: 50%;
 	}
 
 	.contact-form {
 		width: 50%;
-	}
-}
-
-@media screen and (min-width: 950px) {
-	#services article h3 {
-		width: 20%;
-	}
-
-	#services article p {
-		width: 80%;
 	}
 }
