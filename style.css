@@ -96,25 +96,10 @@ img {
 	border: solid 2px var(--white-color);
 }
 
-/* Small Buttons *******************************************************/
+/** Header ***************************************************************** */
 
-/* .small-btn {
-	background-color: var(--gray-transparent-color);
-	border: solid 2px transparent;
-	padding: 0.2rem 0.5rem;
-	color: var(--white-color);
-	transition: all 0.3s;
-}
-
-.small-btn:hover {
-	border: solid 2px var(--white-color);
-} */
-
-/** Sections *****************************/
-
-/* Header ***************************************************************** */
 header {
-	gap: 2rem;
+	gap: 1rem;
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -124,15 +109,17 @@ header {
 }
 
 header .logo {
-	width: 10rem;
+	width: 8rem;
 }
 
+/* Descktop Menu *********************************************/
+
 .descktop-navbar {
-	gap: 3rem;
+	gap: 2rem;
+	display: none;
 }
 
 .descktop-navbar a {
-	font-weight: bold;
 	line-height: 0.2rem;
 	text-underline-offset: 0.5rem;
 	color: var(--white-color);
@@ -144,7 +131,6 @@ header .logo {
 
 .lang-btn {
 	background-color: transparent;
-	font-weight: bold;
 	font-size: 1rem;
 	color: var(--white-color);
 	border: none;
@@ -178,6 +164,56 @@ header .logo {
 	border: none;
 	color: var(--white-color);
 }
+
+/* Mobile Menu *********************************************/
+.mobile-menu {
+	display: block;
+}
+
+.menu-icon {
+	font-size: 2rem;
+	cursor: pointer;
+	display: block;
+}
+
+.mobile-navbar-back {
+	position: absolute;
+	background-color: var(--gray-transparent-color);
+	width: 100%;
+	right: 0;
+	top: 0;
+	justify-content: right;
+	display: none;
+}
+
+.opened-menu {
+	display: flex;
+}
+
+.mobile-navbar {
+	right: 0;
+	top: 0;
+	width: 80vw;
+	background-color: var(--bg-transparent-color);
+	padding-top: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	min-height: 100vh;
+}
+
+.close-menu-icon {
+	font-size: 2rem;
+	cursor: pointer;
+	text-align: right;
+}
+
+.mobile-navbar a {
+	font-weight: bold;
+	color: var(--white-color);
+}
+
+/** Sections *****************************/
 
 /* Home ***************************************************************** */
 #home {
@@ -392,6 +428,14 @@ footer p {
 }
 
 @media screen and (min-width: 768px) {
+	.mobile-menu {
+		display: none;
+	}
+
+	.descktop-navbar {
+		display: flex;
+	}
+
 	.services-content article h3 {
 		width: 25%;
 	}
