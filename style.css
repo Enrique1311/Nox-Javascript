@@ -11,16 +11,13 @@
 	--primary-color: #000000;
 	--bg-transparent-color: #000000cf;
 	--gray-transparent-color: #8f8e8e7e;
+	--dark-gray-transparent-color: #5151517e;
 	--white-color: #ffffff;
 }
 
 body {
 	overflow-x: hidden;
 	color: var(--white-color);
-}
-
-main {
-	margin-top: 5rem;
 }
 
 a {
@@ -44,8 +41,8 @@ img {
 }
 
 .padding-x {
-	padding-left: 5vw;
-	padding-right: 5vw;
+	padding-left: 4vw;
+	padding-right: 4vw;
 }
 
 .flex-center {
@@ -120,21 +117,26 @@ header .logo {
 }
 
 .descktop-navbar a {
-	line-height: 0.2rem;
-	text-underline-offset: 0.5rem;
+	font-size: 1rem;
 	color: var(--white-color);
+	padding-bottom: 0.2rem;
+	padding-top: 0.2rem;
+	border-bottom: 2px solid transparent;
+	transition: all 0.5s;
 }
 
 .descktop-navbar a:hover {
-	text-decoration: underline;
+	border-bottom: 2px solid var(--white-color);
 }
 
 .lang-btn {
 	background-color: transparent;
-	font-size: 1rem;
+	font-size: 0.8rem;
+	padding: 0.4rem;
 	color: var(--white-color);
 	border: none;
 	cursor: pointer;
+	background-color: var(--gray-transparent-color);
 }
 
 .lang-selector:hover .lang-menu {
@@ -143,25 +145,33 @@ header .logo {
 
 .lang-selector {
 	position: relative;
+	width: fit-content;
 }
 
 .lang-menu {
 	position: absolute;
-	top: 1.5rem;
+	top: 1.8rem;
 	visibility: hidden;
 	background-color: var(--gray-transparent-color);
-	padding: 1rem;
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
 	flex-direction: column;
-	gap: 1rem;
 	width: 100%;
+	border: solid 1px var(--gray-transparent-color);
 }
 
 .lang-menu button {
 	background-color: transparent;
 	border: none;
+	color: var(--white-color);
+	padding: 0.4rem;
+	width: 100%;
+	text-align: left;
+}
+
+.lang-menu button:hover {
+	background-color: var(--gray-transparent-color);
 	color: var(--white-color);
 }
 
@@ -178,16 +188,18 @@ header .logo {
 
 .mobile-navbar-back {
 	position: absolute;
-	background-color: var(--gray-transparent-color);
+	background-color: var(--dark-gray-transparent-color);
 	width: 100%;
 	right: 0;
 	top: 0;
 	justify-content: right;
-	display: none;
+	display: flex;
+	transform: translateX(-110%);
+	transition: transform 0.5s;
 }
 
-.opened-menu {
-	display: flex;
+.mobile-navbar-back.opened-menu {
+	transform: translateX(0);
 }
 
 .mobile-navbar {
@@ -209,7 +221,6 @@ header .logo {
 }
 
 .mobile-navbar a {
-	font-weight: bold;
 	color: var(--white-color);
 }
 
@@ -225,8 +236,8 @@ header .logo {
 }
 
 .home-container {
-	padding-top: 6rem;
-	padding-bottom: 4rem;
+	padding-top: 8rem;
+	padding-bottom: 6rem;
 	width: 100%;
 	min-height: 100vh;
 	display: flex;
@@ -238,6 +249,7 @@ header .logo {
 	width: 100%;
 	text-align: center;
 	font-size: 3rem;
+	margin-top: 3rem;
 }
 
 .home-text {
@@ -258,21 +270,18 @@ header .logo {
 }
 
 .about-content {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 	gap: 3rem;
-	overflow-x: hidden;
 }
 
 .about-article {
 	border-left: solid 1px var(--gray-transparent-color);
-	width: 300px;
-	max-width: 400px;
 }
 
 .about-article img {
 	min-width: 100%;
+	object-fit: cover;
 }
 
 .article-detail {
@@ -361,6 +370,7 @@ header .logo {
 p {
 	width: 100%;
 	text-align: left;
+	margin-bottom: 0.3rem;
 }
 
 .address-item i {
@@ -388,6 +398,7 @@ textarea {
 	background-color: var(--gray-transparent-color);
 	color: var(--white-color);
 	outline: none;
+	resize: none;
 }
 
 /* Footer ***************************************************************** */
@@ -404,6 +415,31 @@ footer {
 
 footer p {
 	width: auto;
+}
+
+/* Top Button ************************************************************* */
+.top-btn {
+	position: fixed;
+	bottom: 2rem;
+	right: 1rem;
+	border: 2px solid transparent;
+	color: var(--white-color);
+	padding: 0.5rem 0.2rem;
+	font-size: 1.5rem;
+	background-color: var(--gray-transparent-color);
+	z-index: 100;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.top-btn:hover {
+	transform: scale(1.2);
+	border: 2px solid var(--white-color);
+}
+
+.hidden-btn {
+	visibility: hidden;
+	opacity: 0;
 }
 
 /** Media Queries *************************/
@@ -450,10 +486,19 @@ footer p {
 
 	.contact-address {
 		width: 40%;
-		height: 490px;
+		height: 520px;
 		justify-content: space-between;
 		align-items: flex-start;
 		flex-direction: column;
+	}
+
+	.address-items {
+		gap: 3rem;
+	}
+
+	.address-item h3,
+	p {
+		margin-bottom: 0.8rem;
 	}
 
 	.contact-address img {
