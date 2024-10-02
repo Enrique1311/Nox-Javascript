@@ -13,7 +13,6 @@
 	--gray-transparent-color: #8f8e8e7e;
 	--dark-gray-transparent-color: #5151517e;
 	--white-color: #ffffff;
-	font-size: 14px;
 }
 
 body {
@@ -533,10 +532,6 @@ footer p {
 }
 
 @media screen and (min-width: 768px) {
-	:root {
-		font-size: 16px;
-	}
-
 	.mobile-menu {
 		display: none;
 	}
