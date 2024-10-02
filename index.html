@@ -43,6 +43,11 @@
 			rel="stylesheet"
 			href="style.css"
 		/>
+		<link
+			rel="icon"
+			href="./assets/imgs/nox_favicon.png"
+			type="icon/png"
+		/>
 		<script
 			src="https://kit.fontawesome.com/e3fdf6ef30.js"
 			crossorigin="anonymous"
@@ -291,57 +296,68 @@
 							</div>
 						</div>
 						<form
-							action=""
+							action="https://formsubmit.co/matias@noxcapitals.com"
+							method="POST"
 							class="contact-form flex-between"
 						>
-							<div class="form-item">
-								<label for="">Name</label>
-								<input
-									type="text"
-									name="name"
-									required
-								/>
-							</div>
-							<div class="form-item">
-								<label for="">Email</label>
-								<input
-									type="email"
-									name="email"
-									required
-								/>
-							</div>
-							<div class="form-item">
-								<label for="">Subject</label>
-								<input
-									type="text"
-									name="subject"
-									required
-								/>
-							</div>
-							<div class="form-item">
-								<label for="">Message</label>
-								<textarea
-									cols="30"
-									rows="8"
-									name="message"
-									id=""
-									required
-								></textarea>
-							</div>
-							<button
+							<label for="name">Name</label>
+							<input
+								type="text"
+								name="name"
+								title="Only letters and blanks!"
+								pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+								required
+							/>
+							<label for="email">Email</label>
+							<input
+								type="email"
+								name="email"
+								title="Invalid email!"
+								pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+								required
+							/>
+							<label for="subject">Subject</label>
+							<input
+								type="text"
+								name="subject"
+								title="Subject is required!"
+							/>
+							<label for="comments">Message</label>
+							<textarea
+								cols="30"
+								rows="8"
+								name="comments"
+								title="Only allows up to 255 characters!"
+								data-pattern="^.{1,255}$"
+								required
+							></textarea>
+							<input
 								type="submit"
-								class="main-btn"
-							>
-								Send
-							</button>
+								value="Send"
+							/>
+							<input
+								type="hidden"
+								name="_captcha"
+								value="false"
+							/>
+							<div class="form-loader hidden">
+								<img
+									src="./assets/imgs/loader.svg"
+									alt="Sending message..."
+								/>
+							</div>
+							<p class="form-response hidden">The message was sent!</p>
 						</form>
 					</div>
 				</div>
 			</section>
 		</main>
 		<footer class="padding-x">
-			<p>Privacy | Terms and condition</p>
-			<p>Ⓒ 2024 All rights reserved. NOX Capital Partners</p>
+			<div>
+				<p>Privacy | Terms and condition</p>
+				<p>Ⓒ 2024 All rights reserved. NOX Capital Partners</p>
+			</div>
+			<p>Created by enriquespinelli.coder@gmail.com</p>
 		</footer>
 		<button
 			type="button"
