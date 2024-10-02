@@ -211,7 +211,8 @@ header .logo {
 	padding-top: 1.5rem;
 	display: flex;
 	flex-direction: column;
-	gap: 3rem;
+	gap: 5rem;
+	padding-left: 5rem;
 	min-height: 100vh;
 }
 
