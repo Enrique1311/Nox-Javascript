@@ -432,10 +432,15 @@ textarea {
 	background-color: var(--bg-transparent-color);
 	font-size: 1.4rem;
 	font-weight: bold;
-	text-align: center;
-	padding: 3rem 0;
+	padding: 2rem 3rem;
+	width: 100%;
 	border: 1px solid var(--white-color);
 	bottom: 0;
+}
+
+.form-response p {
+	text-align: center;
+	margin: 0;
 }
 
 .form-error {

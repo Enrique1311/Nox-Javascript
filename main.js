@@ -1,12 +1,15 @@
 const d = document;
 
+const $inputs = d.querySelectorAll(".contact-form [required]"),
+	$contactForm = d.querySelector(".contact-form"),
+	$loader = d.querySelector(".form-loader"),
+	$formResponse = d.querySelector(".form-response");
+
 // * Mobile Menu ****************************************************
 const mobileMenu = () => {
 	const $menuIcon = document.querySelector(".menu-icon i"),
 		$mobileNavbarBack = document.querySelector(".mobile-navbar-back"),
 		$closeMenuIcon = document.querySelector(".close-menu-icon i");
-
-	console.log($menuIcon, $mobileNavbarBack);
 
 	const openMenu = () => {
 		$mobileNavbarBack.classList.add("opened-menu");
@@ -20,7 +23,6 @@ const mobileMenu = () => {
 	$menuIcon.addEventListener("click", openMenu);
 	$closeMenuIcon.addEventListener("click", closeMenu);
 };
-mobileMenu();
 
 // * Top Button ********************************************************
 const topButton = () => {
@@ -40,13 +42,10 @@ const topButton = () => {
 		}
 	});
 };
-topButton();
 
-// * Form Functions **************************************************
+// * Form Function **************************************************
 
-const formValidations = () => {
-	const $inputs = d.querySelectorAll(".contact-form [required]");
-
+const contactForm = () => {
 	$inputs.forEach((input) => {
 		const $span = d.createElement("span");
 		$span.id = input.name;
@@ -74,29 +73,39 @@ const formValidations = () => {
 			}
 		}
 	});
-};
-formValidations();
-
-const formSubmit = () => {
-	const $contactForm = d.querySelector(".contact-form");
 
 	d.addEventListener("submit", (e) => {
 		e.preventDefault();
 
-		const $loader = d.querySelector(".form-loader"),
-			$formResponse = d.querySelector(".form-response");
-
 		$loader.classList.remove("hidden");
 
-		setTimeout(() => {
-			$loader.classList.add("hidden");
-			$formResponse.classList.remove("hidden");
-			$contactForm.reset();
-
-			setTimeout(() => {
-				$formResponse.classList.add("hidden");
-			}, 2000);
-		}, 2000);
+		fetch("https://formsubmit.co/ajax/matias@noxcapitals.com", {
+			method: "POST",
+			body: new FormData(e.target),
+		})
+			.then((res) => (res.ok ? res.json() : Promise.reject(res)))
+			.then((json) => {
+				console.log(json);
+				$loader.classList.add("hidden");
+				$formResponse.classList.remove("hidden");
+				$formResponse.innerHTML = `<p>${json.message}</p>`;
+				$contactForm.reset();
+			})
+			.catch((err) => {
+				let message = err.statusText || "An error occurred, please try again!";
+				$formResponse.innerHTML = `<p>Error ${err.status}: ${message}</p>`;
+			})
+			.finally(() => {
+				setTimeout(() => {
+					$formResponse.classList.add("hidden");
+					$formResponse.innerHTML = "";
+				}, 3000);
+			});
 	});
 };
-formSubmit();
+
+d.addEventListener("DOMContentLoaded", () => {
+	mobileMenu();
+	topButton();
+	contactForm();
+});
