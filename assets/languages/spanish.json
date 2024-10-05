@@ -1,0 +1,45 @@
+{
+	"header": {
+		"home": "Inicio",
+		"about": "Sobre Nosotros",
+		"services": "Servicios",
+		"contact": "Contacto",
+		"language": "Idioma",
+		"english-option": "Inglés",
+		"spanish-option": "Español"
+	},
+	"home": {
+		"subtitle": "Firma boutique de investment banking que brinda servicios de asesoramiento financiero en Estados Unidos y Latinoamérica"
+	},
+	"about": {},
+	"services": {
+		"title": "Nuestros Servicios",
+		"subtitle": "Asesoramiento estratégico y financiero de primer nivel para nuestros clientes",
+		"description": " NCP ofrece una amplia gama de servicios de asesoramiento financiero a sus clientes, incluyendo fusiones y adquisiciones (M&A), levantamiento de capital, financiamiento estructurado y opiniones independientes de valuación. Sus miembros han trabajado para instituciones financieras de primer nivel en transacciones que abarcan una amplia variedad de industrias, incluyendo Oil & Gas, agribusiness, real estate, energía, sectores industriales, entre otros",
+		"title1": "Fusiones y Adquisiciones",
+		"text1": "Ejecución de procesos de fusiones y adquisiciones, ventas y alianzas estratégicas, incluyendo la estructuración del acuerdo, el ejercicio de valuación y el proceso de due diligence",
+		"title2": "Levantamiento de Capital",
+		"text2": "Asesoría estratégica y soporte en la ejecución del acuerdo, para asegurar una financiación óptima a través de diversas fuentes de dinero, incluyendo equity, deuda e instrumentos híbridos, adaptados a las necesidades del cliente y las condiciones del mercado",
+		"title3": "Financiamiento Estructurado",
+		"text3": "Asesoramiento experto en transacciones financieras complejas, incluyendo el diseño de productos financieros personalizados para optimizar la estructura de capital, gestionar riesgos y acceder a fuentes de financiación no tradicionales",
+		"title4": "Opiniones Independientes",
+		"text4": "Análisis riguroso para determinar el valor de mercado de activos o empresas, proporcionando un punto de referencia para determinar el precio a considerar en una transacción"
+	},
+	"contact": {
+		"title": "Contacto",
+		"subtitle": "Contáctanos",
+		"address": "Dirección",
+		"location": "Honduras 5550, piso 4",
+		"name": "Nombre",
+		"inputTitle": "",
+		"email": "Email",
+		"subject": "Asunto",
+		"message": "Mensaje",
+		"send-btn": "Enviar"
+	},
+	"footer": {
+		"privacy": "Privacidad | Términos y condiciones",
+		"copyright": "Ⓒ 2024 Todos los derechos reservados. NOX Capital Partners",
+		"created": "Creado por enriquespinelli.coder@gmail.com"
+	}
+}

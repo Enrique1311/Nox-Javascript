@@ -8,11 +8,11 @@
 		/>
 		<meta
 			name="title"
-			content="NOX Capital Partners"
+			content="NOX Capital Partners - NCP offers a wide range of financial advisory services to its clients, including M&A, capital raising and fairness opinions. Its members have worked for top tier financial institutions in deals spanning a wide range of industries, including Oil & Gas, agribusiness, real estate, energy, industrials, and others"
 		/>
 		<meta
 			name="description"
-			content="Premier boutique investment bank offering tailor made financial advisory services across U.S. and Latam"
+			content="We offers a wide range of financial advisory services to its clients, including M&A, capital raising and fairness opinions. Its members have worked for top tier financial institutions in deals spanning a wide range of industries, including Oil & Gas, agribusiness, real estate, energy, industrials, and others"
 		/>
 		<meta
 			name="keywords"
@@ -28,7 +28,7 @@
 		/>
 		<meta
 			name="language"
-			content="En"
+			content="E"
 		/>
 		<meta
 			name="author"
@@ -48,6 +48,19 @@
 			href="./assets/imgs/nox_favicon.png"
 			type="icon/png"
 		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
 		<script
 			src="https://kit.fontawesome.com/e3fdf6ef30.js"
 			crossorigin="anonymous"
@@ -65,22 +78,54 @@
 				/>
 			</a>
 
-			<!--* Descktop Menu **************************************************** -->
-			<nav class="descktop-navbar flex-between">
-				<a href="#home">HOME</a>
-				<!-- <a href="#about">ABOUT US</a> -->
-				<a href="#services">SERVICES</a>
-				<a href="#contact">CONTACT</a>
-
-				<!-- <div class="lang-selector">
-					<button class="lang-btn">
+			<!--* Desktop Menu **************************************************** -->
+			<nav class="desktop-navbar flex-between">
+				<a
+					href="#home"
+					data-section="header"
+					data-value="home"
+					>HOME</a
+				>
+				<!-- <a href="#about" data-section="" data-value="">ABOUT US</a> -->
+				<a
+					href="#services"
+					data-section="header"
+					data-value="services"
+					>SERVICES</a
+				>
+				<a
+					href="#contact"
+					data-section="header"
+					data-value="contact"
+					>CONTACT</a
+				>
+				<div class="lang-selector">
+					<button
+						class="lang-btn"
+						data-section="header"
+						data-value="language"
+					>
 						LANGUAGE
 					</button>
-					<div class="lang-menu">
-						<button type="button">English</button>
-						<button type="button">Spanish</button>
+					<div class="lang-menu show">
+						<button
+							type="button"
+							data-section="header"
+							data-value="english-option"
+							data-lang="english"
+						>
+							English
+						</button>
+						<button
+							type="button"
+							data-section="header"
+							data-value="spanish-option"
+							data-lang="spanish"
+						>
+							Spanish
+						</button>
 					</div>
-				</div> -->
+				</div>
 			</nav>
 
 			<!--* Mobile Menu **************************************************** -->
@@ -91,19 +136,50 @@
 				<div class="mobile-navbar-back">
 					<nav class="mobile-navbar padding-x">
 						<div class="close-menu-icon"><i class="fa-solid fa-xmark"></i></div>
-						<a href="#home">HOME</a>
-						<!-- <a href="#about">ABOUT US</a> -->
-						<a href="#services">SERVICES</a>
-						<a href="#contact">CONTACT</a>
-						<!-- <div class="lang-selector">
-							<button class="lang-btn">
+						<a
+							href="#home"
+							data-section="header"
+							data-value="home"
+							>HOME</a
+						>
+						<!-- <a href="#about" data-section="" data-value="">ABOUT US</a> -->
+						<a
+							href="#services"
+							data-section="header"
+							data-value="services"
+							>SERVICES</a
+						>
+						<a
+							href="#contact"
+							data-section="header"
+							data-value="contact"
+							>CONTACT</a
+						>
+						<div class="lang-selector">
+							<button
+								class="lang-btn"
+								data-section="header"
+								data-value="language"
+							>
 								LANGUAGE
 							</button>
-							<div class="lang-menu">
-								<button type="button">English</button>
-								<button type="button">Spanish</button>
+							<div class="lang-menu show">
+								<button
+									type="button"
+									data-section="header"
+									data-value="english-option"
+								>
+									English
+								</button>
+								<button
+									type="button"
+									data-section="header"
+									data-value="spanish-option"
+								>
+									Spanish
+								</button>
 							</div>
-						</div> -->
+						</div>
 					</nav>
 				</div>
 			</div>
@@ -113,7 +189,11 @@
 			<section id="home">
 				<div class="home-container padding-x">
 					<h1 class="home-title">NOX Capital Partners</h1>
-					<p class="home-text padding-x">
+					<p
+						class="home-text padding-x"
+						data-section="home"
+						data-value="subtitle"
+					>
 						Premier boutique investment bank offering tailor made financial
 						advisory services across U.S. and Latam
 					</p>
@@ -219,11 +299,25 @@
 			<!--* Services **************************************************** -->
 			<section id="services">
 				<div class="section-container padding-x">
-					<h2 class="section-title padding-x">
-						<span>Our Services</span>Top tier financial and strategic advisory
-						for our clients
-					</h2>
-					<p class="section-description">
+					<div class="section-title padding-x">
+						<h2
+							data-section="services"
+							data-value="title"
+						>
+							Our Services
+						</h2>
+						<h3
+							data-section="services"
+							data-value="subtitle"
+						>
+							Top tier financial and strategic advisory for our clients
+						</h3>
+					</div>
+					<p
+						class="section-description"
+						data-section="services"
+						data-value="description"
+					>
 						NCP offers a wide range of financial advisory services to its
 						clients, including M&A, capital raising and fairness opinions. Its
 						members have worked for top tier financial institutions in deals
@@ -232,8 +326,16 @@
 					</p>
 					<div class="services-content flex-between">
 						<article class="padding-x flex-between">
-							<h3>Mergers & Acquisitions</h3>
-							<p>
+							<h3
+								data-section="services"
+								data-value="title1"
+							>
+								Mergers & Acquisitions
+							</h3>
+							<p
+								data-section="services"
+								data-value="text1"
+							>
 								Expert guidance and execution for mergers, acquisitions,
 								divestitures, and strategic partnerships, encompassing deal
 								structuring, valuation, due diligence, and transaction
@@ -241,8 +343,16 @@
 							</p>
 						</article>
 						<article class="padding-x flex-between">
-							<h3>Capital Raising</h3>
-							<p>
+							<h3
+								data-section="services"
+								data-value="title2"
+							>
+								Capital Raising
+							</h3>
+							<p
+								data-section="services"
+								data-value="text2"
+							>
 								Strategic advisory and execution support for securing optimal
 								funding across diverse sources, including equity, debt, and
 								hybrid instruments, tailored to client needs and market
@@ -250,8 +360,16 @@
 							</p>
 						</article>
 						<article class="padding-x flex-between">
-							<h3>Structured Finance</h3>
-							<p>
+							<h3
+								data-section="services"
+								data-value="title3"
+							>
+								Structured Finance
+							</h3>
+							<p
+								data-section="services"
+								data-value="text3"
+							>
 								Provide expert guidance on complex financial transactions,
 								including designing custom financial products to optimize
 								capital structure, manage risk, and access non-traditional
@@ -259,8 +377,16 @@
 							</p>
 						</article>
 						<article class="padding-x flex-between">
-							<h3>Fairness Opinions</h3>
-							<p>
+							<h3
+								data-section="services"
+								data-value="title4"
+							>
+								Fairness Opinions
+							</h3>
+							<p
+								data-section="services"
+								data-value="text4"
+							>
 								Rigorous analysis to determine the fair market value of assets,
 								securities, or businesses, providing an objective benchmark for
 								transaction pricing and stakeholder protection in corporate
@@ -274,9 +400,20 @@
 			<!--* Contact **************************************************** -->
 			<section id="contact">
 				<div class="section-container padding-x contact-container">
-					<h2 class="section-title padding-x">
-						<span>Contact</span>Contact us
-					</h2>
+					<div class="section-title padding-x">
+						<h2
+							data-section="contact"
+							data-value="title"
+						>
+							Contact
+						</h2>
+						<h3
+							data-section="contact"
+							data-value="subtitle"
+						>
+							Contact US
+						</h3>
+					</div>
 					<div class="contact-content">
 						<div class="contact-address">
 							<img
@@ -285,8 +422,18 @@
 							/>
 							<div class="address-items flex-between">
 								<div class="address-item">
-									<h3><i class="fa-solid fa-location-dot"></i> Address</h3>
-									<p>Honduras 5550, 4th floor</p>
+									<h3
+										data-section="contact"
+										data-value="address"
+									>
+										<i class="fa-solid fa-location-dot"></i> Address
+									</h3>
+									<p
+										data-section="contact"
+										data-value="location"
+									>
+										Honduras 5550, 4th floor
+									</p>
 									<p>Buenos Aires, Argentina</p>
 								</div>
 								<div class="address-item">
@@ -296,7 +443,12 @@
 							</div>
 						</div>
 						<form class="contact-form flex-between">
-							<label for="name">Name</label>
+							<label
+								for="name"
+								data-section="contact"
+								data-value="name"
+								>Name</label
+							>
 							<input
 								type="text"
 								name="name"
@@ -312,13 +464,23 @@
 								pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
 								required
 							/>
-							<label for="subject">Subject</label>
+							<label
+								for="subject"
+								data-section="contact"
+								data-value="subject"
+								>Subject</label
+							>
 							<input
 								type="text"
 								name="subject"
 								title="Subject is required!"
 							/>
-							<label for="comments">Message</label>
+							<label
+								for="comments"
+								data-section="contact"
+								data-value="message"
+								>Message</label
+							>
 							<textarea
 								cols="30"
 								rows="8"
@@ -327,10 +489,14 @@
 								data-pattern="^.{1,255}$"
 								required
 							></textarea>
-							<input
+							<button
 								type="submit"
-								value="Send"
-							/>
+								class="main-btn"
+								data-section="contact"
+								data-value="send-btn"
+							>
+								Send
+							</button>
 							<input
 								type="hidden"
 								name="_captcha"
@@ -352,10 +518,25 @@
 		</main>
 		<footer class="padding-x">
 			<div>
-				<p>Privacy | Terms and condition</p>
-				<p>Ⓒ 2024 All rights reserved. NOX Capital Partners</p>
+				<p
+					data-section="footer"
+					data-value="privacy"
+				>
+					Privacy | Terms and condition
+				</p>
+				<p
+					data-section="footer"
+					data-value="copyright"
+				>
+					Ⓒ 2024 All rights reserved. NOX Capital Partners
+				</p>
 			</div>
-			<p>Created by enriquespinelli.coder@gmail.com</p>
+			<p
+				data-section="footer"
+				data-value="created"
+			>
+				Created by enriquespinelli.coder@gmail.com
+			</p>
 		</footer>
 		<button
 			type="button"

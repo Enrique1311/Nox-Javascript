@@ -5,7 +5,10 @@ const $inputs = d.querySelectorAll(".contact-form [required]"),
 	$loader = d.querySelector(".form-loader"),
 	$formResponse = d.querySelector(".form-response");
 
+// * Desktop and Mobile Menu ****************************************************
+
 // * Mobile Menu ****************************************************
+
 const mobileMenu = () => {
 	const $menuIcon = document.querySelector(".menu-icon i"),
 		$mobileNavbarBack = document.querySelector(".mobile-navbar-back"),
@@ -24,7 +27,28 @@ const mobileMenu = () => {
 	$closeMenuIcon.addEventListener("click", closeMenu);
 };
 
+// * Languages selectors ************************************************
+const languageSelector = () => {
+	const $langButtons = d.querySelectorAll("[data-lang]"),
+		$textToChange = d.querySelectorAll("[data-section]");
+
+	$langButtons.forEach((btn) => {
+		btn.addEventListener("click", () => {
+			fetch(`./assets/languages/${btn.dataset.lang}.json`)
+				.then((res) => res.json())
+				.then((data) => {
+					$textToChange.forEach((el) => {
+						const section = el.dataset.section,
+							value = el.dataset.value;
+						el.innerHTML = data[section][value];
+					});
+				});
+		});
+	});
+};
+
 // * Top Button ********************************************************
+
 const topButton = () => {
 	window.addEventListener("scroll", (e) => {
 		let scrollTop = d.documentElement.scrollTop;
@@ -79,7 +103,7 @@ const contactForm = () => {
 
 		$loader.classList.remove("hidden");
 
-		fetch("https://formsubmit.co/ajax/matias@noxcapitals.com", {
+		fetch("https://formsubmit.co/ajax/ejspinelli131176@gmail.com", {
 			method: "POST",
 			body: new FormData(e.target),
 		})
@@ -108,4 +132,5 @@ d.addEventListener("DOMContentLoaded", () => {
 	mobileMenu();
 	topButton();
 	contactForm();
+	languageSelector();
 });

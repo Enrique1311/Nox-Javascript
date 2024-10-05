@@ -4,10 +4,11 @@
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	box-sizing: border-box;
 	scroll-behavior: smooth;
+	font-family: "Roboto", sans-serif;
 }
 
 :root {
-	font-size: 16px;
+	font-size: 15px;
 	--primary-color: #000000;
 	--bg-transparent-color: #000000cf;
 	--gray-transparent-color: #8f8e8e7e;
@@ -22,6 +23,7 @@ body {
 
 a {
 	text-decoration: none;
+	text-transform: uppercase;
 }
 
 img {
@@ -62,19 +64,25 @@ img {
 .section-title {
 	width: 100%;
 	background-color: var(--gray-transparent-color);
-	text-align: left;
-	font-size: 1.2rem;
 	padding-top: 1.2rem;
 	padding-bottom: 1.2rem;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
 }
 
-.section-title span {
+.section-title h2 {
 	font-weight: bold;
-	font-size: 1.5rem;
+	font-size: 1.4rem;
 	border-right: 2px solid var(--white-color);
 	padding-right: 1rem;
 	margin-right: 1rem;
 	color: var(--white-color);
+	text-transform: uppercase;
+}
+
+.section-title h3 {
+	font-size: 1rem;
 }
 
 /* Main Buttons *******************************************************/
@@ -109,38 +117,36 @@ header .logo {
 	width: 8rem;
 }
 
-/* Descktop Menu *********************************************/
+/* Desktop Menu *********************************************/
 
-.descktop-navbar {
-	gap: 2rem;
+.desktop-navbar {
 	display: none;
+	gap: 2rem;
 }
 
-.descktop-navbar a {
+.desktop-navbar a {
 	font-size: 1rem;
 	color: var(--white-color);
 	padding-bottom: 0.2rem;
 	padding-top: 0.2rem;
 	border-bottom: 2px solid transparent;
 	transition: all 0.5s;
+	text-transform: uppercase;
 }
 
-.descktop-navbar a:hover {
+.desktop-navbar a:hover {
 	border-bottom: 2px solid var(--white-color);
 }
 
 .lang-btn {
-	background-color: transparent;
-	font-size: 0.8rem;
-	padding: 0.4rem;
+	font-size: 1rem;
 	color: var(--white-color);
+	padding-bottom: 0.2rem;
+	padding-top: 0.2rem;
 	border: none;
+	background-color: transparent;
 	cursor: pointer;
-	background-color: var(--gray-transparent-color);
-}
-
-.lang-selector:hover .lang-menu {
-	visibility: visible;
+	text-transform: uppercase;
 }
 
 .lang-selector {
@@ -157,8 +163,12 @@ header .logo {
 	justify-content: center;
 	align-items: flex-start;
 	flex-direction: column;
-	width: 100%;
+	width: 120%;
 	border: solid 1px var(--gray-transparent-color);
+}
+
+.lang-menu.show {
+	visibility: visible;
 }
 
 .lang-menu button {
@@ -168,6 +178,8 @@ header .logo {
 	padding: 0.4rem;
 	width: 100%;
 	text-align: left;
+	text-transform: uppercase;
+	font-size: 0.7rem;
 }
 
 .lang-menu button:hover {
@@ -207,11 +219,11 @@ header .logo {
 	top: 0;
 	width: 80vw;
 	background-color: var(--bg-transparent-color);
-	padding-top: 1.5rem;
+	padding-top: 1rem;
 	display: flex;
 	flex-direction: column;
-	gap: 5rem;
-	padding-left: 5rem;
+	gap: 4rem;
+	padding-left: 4rem;
 	min-height: 100vh;
 }
 
@@ -311,6 +323,7 @@ header .logo {
 }
 
 .services-content article h3 {
+	font-size: 1.2rem;
 	width: 45%;
 }
 
@@ -348,11 +361,11 @@ header .logo {
 .contact-address {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: flex-end;
 	align-items: center;
 	width: 100%;
 	height: auto;
-	gap: 2rem;
+	gap: 3rem;
 }
 
 .contact-address img {
@@ -361,7 +374,7 @@ header .logo {
 
 .address-items {
 	flex-direction: column;
-	gap: 2rem;
+	gap: 3rem;
 }
 
 .address-item {
@@ -478,7 +491,6 @@ footer {
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 	width: 100%;
-	gap: 0.5rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-end;
@@ -537,11 +549,15 @@ footer p {
 }
 
 @media screen and (min-width: 768px) {
+	:root {
+		font-size: 18px;
+	}
+
 	.mobile-menu {
 		display: none;
 	}
 
-	.descktop-navbar {
+	.desktop-navbar {
 		display: flex;
 	}
 
@@ -564,14 +580,10 @@ footer p {
 
 	.contact-address {
 		width: 40%;
-		height: 520px;
-		justify-content: space-between;
+		height: 35rem;
+		justify-content: flex-end;
 		align-items: flex-start;
 		flex-direction: column;
-	}
-
-	.address-items {
-		gap: 3rem;
 	}
 
 	.address-item h3,
@@ -582,7 +594,6 @@ footer p {
 	.contact-address img {
 		width: 100%;
 		max-width: 15rem;
-		margin: 0 auto;
 	}
 
 	.contact-form {

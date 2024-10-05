@@ -1,0 +1,45 @@
+{
+	"header": {
+		"home": "home",
+		"about": "about us",
+		"services": "services",
+		"contact": "contact",
+		"language": "Language",
+		"english-option": "English",
+		"spanish-option": "Spanish"
+	},
+	"home": {
+		"subtitle": "Premier boutique investment bank offering tailor made financial advisory services across U.S. and Latam"
+	},
+	"about": {},
+	"services": {
+		"title": "Our Services",
+		"subtitle": "Top tier financial and strategic advisory for our clients",
+		"description": "NCP offers a wide range of financial advisory services to its clients, including M&A, capital raising and fairness opinions. Its members have worked for top tier financial institutions in deals spanning a wide range of industries, including Oil & Gas, agribusiness, real estate, energy, industrials, and others",
+		"title1": "Mergers & Acquisitions",
+		"text1": "Expert guidance and execution for mergers, acquisitions, divestitures, and strategic partnerships, encompassing deal structuring, valuation, due diligence, and transaction management",
+		"title2": "Capital Raising",
+		"text2": "Strategic advisory and execution support for securing optimal funding across diverse sources, including equity, debt, and hybrid instruments, tailored to client needs and market conditions",
+		"title3": "Structured Finance",
+		"text3": "Provide expert guidance on complex financial transactions, including designing custom financial products to optimize capital structure, manage risk, and access non-traditional funding sources",
+		"title4": "Fairness Opinions",
+		"text4": "Rigorous analysis to determine the fair market value of assets, securities, or businesses, providing an objective benchmark for transaction pricing and stakeholder protection in corporate actions"
+	},
+	"contact": {
+		"title": "Contact",
+		"subtitle": "Contact us",
+		"address": "Address",
+		"location": "Honduras 5550, 4th floor",
+		"name": "Name",
+		"inputTitle": "",
+		"email": "Email",
+		"subject": "Subject",
+		"message": "Message",
+		"send-btn": "Send"
+	},
+	"footer": {
+		"privacy": "Privacy | Terms and condition",
+		"copyright": "Ⓒ 2024 All rights reserved. NOX Capital Partners",
+		"created": "Created by enriquespinelli.coder@gmail.com"
+	}
+}
