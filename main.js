@@ -5,8 +5,6 @@ const $inputs = d.querySelectorAll(".contact-form [required]"),
 	$loader = d.querySelector(".form-loader"),
 	$formResponse = d.querySelector(".form-response");
 
-// * Desktop and Mobile Menu ****************************************************
-
 // * Mobile Menu ****************************************************
 
 const mobileMenu = () => {
@@ -27,10 +25,12 @@ const mobileMenu = () => {
 	$closeMenuIcon.addEventListener("click", closeMenu);
 };
 
-// * Languages selectors ************************************************
+// * Languages selector ************************************************
+
 const languageSelector = () => {
 	const $langButtons = d.querySelectorAll("[data-lang]"),
 		$textToChange = d.querySelectorAll("[data-section]");
+	console.log($langButtons);
 
 	$langButtons.forEach((btn) => {
 		btn.addEventListener("click", () => {

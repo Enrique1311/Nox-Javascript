@@ -3,10 +3,7 @@
 		"home": "Inicio",
 		"about": "Sobre Nosotros",
 		"services": "Servicios",
-		"contact": "Contacto",
-		"language": "Idioma",
-		"english-option": "Inglés",
-		"spanish-option": "Español"
+		"contact": "Contacto"
 	},
 	"home": {
 		"subtitle": "Firma boutique de investment banking que brinda servicios de asesoramiento financiero en Estados Unidos y Latinoamérica"

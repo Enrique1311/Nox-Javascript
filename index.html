@@ -69,7 +69,7 @@
 	<body>
 		<header class="padding-x flex-between">
 			<a
-				href="#home"
+				href="/"
 				class="logo"
 			>
 				<img
@@ -77,110 +77,84 @@
 					alt="logo"
 				/>
 			</a>
-
-			<!--* Desktop Menu **************************************************** -->
-			<nav class="desktop-navbar flex-between">
-				<a
-					href="#home"
-					data-section="header"
-					data-value="home"
-					>HOME</a
-				>
-				<!-- <a href="#about" data-section="" data-value="">ABOUT US</a> -->
-				<a
-					href="#services"
-					data-section="header"
-					data-value="services"
-					>SERVICES</a
-				>
-				<a
-					href="#contact"
-					data-section="header"
-					data-value="contact"
-					>CONTACT</a
-				>
-				<div class="lang-selector">
-					<button
-						class="lang-btn"
+			<div class="flex-between">
+				<!--* Desktop Menu **************************************************** -->
+				<nav class="desktop-navbar flex-between">
+					<a
+						href="#home"
 						data-section="header"
-						data-value="language"
+						data-value="home"
+						>HOME</a
 					>
-						LANGUAGE
-					</button>
-					<div class="lang-menu show">
-						<button
-							type="button"
-							data-section="header"
-							data-value="english-option"
-							data-lang="english"
-						>
-							English
-						</button>
-						<button
-							type="button"
-							data-section="header"
-							data-value="spanish-option"
-							data-lang="spanish"
-						>
-							Spanish
-						</button>
-					</div>
-				</div>
-			</nav>
+					<!-- <a href="#about" data-section="" data-value="">ABOUT US</a> -->
+					<a
+						href="#services"
+						data-section="header"
+						data-value="services"
+						>SERVICES</a
+					>
+					<a
+						href="#contact"
+						data-section="header"
+						data-value="contact"
+						>CONTACT</a
+					>
+				</nav>
 
-			<!--* Mobile Menu **************************************************** -->
-			<div class="mobile-menu">
-				<div class="menu-icon">
-					<i class="fa-solid fa-bars"></i>
+				<!--* Language Selector Buttons **************************************************** -->
+				<div class="lang-selector flex-center">
+					<button
+						type="button"
+						data-value="english-option"
+						data-lang="english"
+					>
+						<img
+							src="./assets/imgs/usa_flag.png"
+							alt="USA flag"
+						/>
+					</button>
+					<button
+						type="button"
+						data-value="spanish-option"
+						data-lang="spanish"
+					>
+						<img
+							src="./assets/imgs/spain_flag.png"
+							alt="Spanish flag"
+						/>
+					</button>
 				</div>
-				<div class="mobile-navbar-back">
-					<nav class="mobile-navbar padding-x">
-						<div class="close-menu-icon"><i class="fa-solid fa-xmark"></i></div>
-						<a
-							href="#home"
-							data-section="header"
-							data-value="home"
-							>HOME</a
-						>
-						<!-- <a href="#about" data-section="" data-value="">ABOUT US</a> -->
-						<a
-							href="#services"
-							data-section="header"
-							data-value="services"
-							>SERVICES</a
-						>
-						<a
-							href="#contact"
-							data-section="header"
-							data-value="contact"
-							>CONTACT</a
-						>
-						<div class="lang-selector">
-							<button
-								class="lang-btn"
-								data-section="header"
-								data-value="language"
-							>
-								LANGUAGE
-							</button>
-							<div class="lang-menu show">
-								<button
-									type="button"
-									data-section="header"
-									data-value="english-option"
-								>
-									English
-								</button>
-								<button
-									type="button"
-									data-section="header"
-									data-value="spanish-option"
-								>
-									Spanish
-								</button>
+				<!--* Mobile Menu **************************************************** -->
+				<div class="mobile-menu">
+					<div class="menu-icon">
+						<i class="fa-solid fa-bars"></i>
+					</div>
+					<div class="mobile-navbar-back">
+						<nav class="mobile-navbar padding-x">
+							<div class="close-menu-icon">
+								<i class="fa-solid fa-xmark"></i>
 							</div>
-						</div>
-					</nav>
+							<a
+								href="#home"
+								data-section="header"
+								data-value="home"
+								>HOME</a
+							>
+							<!-- <a href="#about" data-section="" data-value="">ABOUT US</a> -->
+							<a
+								href="#services"
+								data-section="header"
+								data-value="services"
+								>SERVICES</a
+							>
+							<a
+								href="#contact"
+								data-section="header"
+								data-value="contact"
+								>CONTACT</a
+							>
+						</nav>
+					</div>
 				</div>
 			</div>
 		</header>

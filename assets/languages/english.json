@@ -3,10 +3,7 @@
 		"home": "home",
 		"about": "about us",
 		"services": "services",
-		"contact": "contact",
-		"language": "Language",
-		"english-option": "English",
-		"spanish-option": "Spanish"
+		"contact": "contact"
 	},
 	"home": {
 		"subtitle": "Premier boutique investment bank offering tailor made financial advisory services across U.S. and Latam"
