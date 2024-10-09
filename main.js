@@ -143,7 +143,8 @@ const contactForm = () => {
 			body: new FormData(e.target),
 		})
 			.then((res) => (res.ok ? res.json() : Promise.reject(res)))
-			.then((json) => {
+			.then(() => {
+				let language = localStorage.getItem("language");
 				$loader.classList.add("hidden");
 				$formResponse.classList.remove("hidden");
 
@@ -154,6 +155,7 @@ const contactForm = () => {
 				$contactForm.reset();
 			})
 			.catch((err) => {
+				let language = localStorage.getItem("language");
 				$formResponse.innerHTML =
 					language === "english"
 						? `<p>Error, try again!</p>`
