@@ -146,18 +146,18 @@ const contactForm = () => {
 			.then((json) => {
 				$loader.classList.add("hidden");
 				$formResponse.classList.remove("hidden");
+
 				$formResponse.innerHTML =
 					language === "english"
-						? `<p>The message was sent! You will be contacted soon!</p>`
-						: `<p>¡Mensaje enviado! ¡Pronto serás contactado!</p>`;
+						? `<p>The message was sent!</p>`
+						: `<p>¡Mensaje enviado!</p>`;
 				$contactForm.reset();
 			})
 			.catch((err) => {
-				// let message = err.statusText || "An error occurred, please try again!";
 				$formResponse.innerHTML =
 					language === "english"
-						? `<p>An error occurred, please try again!</p>`
-						: `<p>¡Hubo un error, intenta de nuevo!</p>`;
+						? `<p>Error, try again!</p>`
+						: `<p>¡Error, intenta otra vez!</p>`;
 			})
 			.finally(() => {
 				setTimeout(() => {
