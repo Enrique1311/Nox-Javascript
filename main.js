@@ -1,9 +1,17 @@
 const d = document;
 
 const $inputs = d.querySelectorAll(".contact-form [required]"),
+	$inputName = d.querySelector(".input-name"),
+	$inputEmail = d.querySelector(".input-email"),
+	$inputSubject = d.querySelector(".input-subject"),
+	$textareaComment = d.querySelector(".textarea-comment"),
 	$contactForm = d.querySelector(".contact-form"),
 	$loader = d.querySelector(".form-loader"),
 	$formResponse = d.querySelector(".form-response");
+
+// * Local Storage **************************************************
+
+localStorage.setItem("language", "english");
 
 // * Mobile Menu ****************************************************
 
@@ -30,10 +38,11 @@ const mobileMenu = () => {
 const languageSelector = () => {
 	const $langButtons = d.querySelectorAll("[data-lang]"),
 		$textToChange = d.querySelectorAll("[data-section]");
-	console.log($langButtons);
 
 	$langButtons.forEach((btn) => {
 		btn.addEventListener("click", () => {
+			localStorage.setItem("language", `${btn.dataset.lang}`);
+
 			fetch(`./assets/languages/${btn.dataset.lang}.json`)
 				.then((res) => res.json())
 				.then((data) => {
@@ -43,6 +52,7 @@ const languageSelector = () => {
 						el.innerHTML = data[section][value];
 					});
 				});
+			contactForm();
 		});
 	});
 };
@@ -70,6 +80,31 @@ const topButton = () => {
 // * Form Function **************************************************
 
 const contactForm = () => {
+	let language = localStorage.getItem("language");
+
+	$inputName.setAttribute(
+		"title",
+		language === "english"
+			? "Only letters and blanks!"
+			: "¡Sólo letras y espacios en blanco!"
+	);
+	$inputEmail.setAttribute(
+		"title",
+		language === "english"
+			? "Invalid email!  Ex: name@example.com"
+			: "¡Email inválido! Ej: nombre@ejemplo.com"
+	);
+	$inputSubject.setAttribute(
+		"title",
+		language === "english" ? "Subject is required!" : "¡El asunto es requerido!"
+	);
+	$textareaComment.setAttribute(
+		"title",
+		language === "english"
+			? "Only allows up to 255 characters!"
+			: "¡Sólo se permiten hasta 255 caracteres!"
+	);
+
 	$inputs.forEach((input) => {
 		const $span = d.createElement("span");
 		$span.id = input.name;
@@ -109,15 +144,20 @@ const contactForm = () => {
 		})
 			.then((res) => (res.ok ? res.json() : Promise.reject(res)))
 			.then((json) => {
-				console.log(json);
 				$loader.classList.add("hidden");
 				$formResponse.classList.remove("hidden");
-				$formResponse.innerHTML = `<p>${json.message}</p>`;
+				$formResponse.innerHTML =
+					language === "english"
+						? `<p>The message was sent! You will be contacted soon!</p>`
+						: `<p>¡Mensaje enviado! ¡Pronto serás contactado!</p>`;
 				$contactForm.reset();
 			})
 			.catch((err) => {
-				let message = err.statusText || "An error occurred, please try again!";
-				$formResponse.innerHTML = `<p>Error ${err.status}: ${message}</p>`;
+				// let message = err.statusText || "An error occurred, please try again!";
+				$formResponse.innerHTML =
+					language === "english"
+						? `<p>An error occurred, please try again!</p>`
+						: `<p>¡Hubo un error, intenta de nuevo!</p>`;
 			})
 			.finally(() => {
 				setTimeout(() => {

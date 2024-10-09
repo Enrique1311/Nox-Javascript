@@ -8,7 +8,7 @@
 		/>
 		<meta
 			name="title"
-			content="NOX Capital Partners - NCP offers a wide range of financial advisory services to its clients, including M&A, capital raising and fairness opinions. Its members have worked for top tier financial institutions in deals spanning a wide range of industries, including Oil & Gas, agribusiness, real estate, energy, industrials, and others"
+			content="NOX Capital Partners - Premier boutique investment bank offering tailor made financial advisory services across U.S. and Latam"
 		/>
 		<meta
 			name="description"
@@ -424,17 +424,17 @@
 								>Name</label
 							>
 							<input
+								class="input-name"
 								type="text"
 								name="name"
-								title="Only letters and blanks!"
 								pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
 								required
 							/>
 							<label for="email">Email</label>
 							<input
+								class="input-email"
 								type="email"
 								name="email"
-								title="Invalid email!"
 								pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
 								required
 							/>
@@ -445,9 +445,10 @@
 								>Subject</label
 							>
 							<input
+								class="input-subject"
 								type="text"
 								name="subject"
-								title="Subject is required!"
+								required
 							/>
 							<label
 								for="comments"
@@ -456,10 +457,10 @@
 								>Message</label
 							>
 							<textarea
+								class="textarea-comment"
 								cols="30"
 								rows="8"
 								name="comments"
-								title="Only allows up to 255 characters!"
 								data-pattern="^.{1,255}$"
 								required
 							></textarea>
